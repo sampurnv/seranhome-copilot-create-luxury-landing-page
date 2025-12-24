@@ -1,11 +1,12 @@
 import React from 'react';
+import logo from '../assets/Final-Logo.png';
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
         <div className="nav-brand">
           <a href="/" style={{display:'flex',alignItems:'center',gap:'0.75rem',textDecoration:'none',color:'inherit'}}>
-            <img src="Final-Logo.png?v=2" alt="Seran Home Logo" className="nav-logo" />
+            <img src={logo} alt="Seran Home Logo" className="nav-logo" />
 
             <span className="nav-brand-text">Automation</span>
           </a>

@@ -1,11 +1,17 @@
 import React from 'react';
 
+import googleLogo from '../assets/partners/google.svg'
+import hikvisionLogo from '../assets/partners/hikvision.svg'
+import legrandLogo from '../assets/partners/legrand.svg'
+import awsLogo from '../assets/partners/aws.svg'
+import ciscoLogo from '../assets/partners/cisco.svg'
+
 const partners = [
-  { id: 'google', name: 'Google Home', img: '/partners/google.png?v=2' },
-  { id: 'hikvision', name: 'Hikvision', img: '/partners/hikvision.png?v=2' },
-  { id: 'legrand', name: 'Legrand', img: '/partners/legrand.png?v=2' },
-  { id: 'aws', name: 'AWS IoT', img: '/partners/aws.png?v=2' },
-  { id: 'cisco', name: 'Cisco', img: '/partners/cisco.png?v=2' }
+  { id: 'google', name: 'Google Home', img: googleLogo },
+  { id: 'hikvision', name: 'Hikvision', img: hikvisionLogo },
+  { id: 'legrand', name: 'Legrand', img: legrandLogo },
+  { id: 'aws', name: 'AWS IoT', img: awsLogo },
+  { id: 'cisco', name: 'Cisco', img: ciscoLogo }
 ];
 
 const Partners = () => {

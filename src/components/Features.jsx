@@ -1,4 +1,7 @@
 import React from 'react'
+import imgBasic from '../assets/Basic.jpeg'
+import imgMedium from '../assets/Medium.jpeg'
+import imgLuxury from '../assets/Luxury.jpeg'
 
 const packages = [
   {
@@ -64,7 +67,7 @@ const Features = () => {
           {packages.map(p => (
             <article key={p.id} className="package-card">
               <div className="package-image">
-                <img src={p.img} alt={p.title} />
+                <img src={p.id === 'basic' ? imgBasic : p.id === 'mid' ? imgMedium : imgLuxury} alt={p.title} />
               </div>
               <div className="package-body">
                 <h3 className="package-title">{p.title}</h3>
