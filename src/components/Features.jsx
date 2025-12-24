@@ -4,7 +4,7 @@ const packages = [
   {
     id: 'basic',
     title: 'Basic Home Automation',
-    img: 'Basic.jpeg',
+    img: 'Basic.jpeg?v=2',
     price: '₹35,999 - ₹50,000',
     desc: 'Ideal for basic lighting, temperature, and security automation without a large investment.',
     items: [
@@ -20,7 +20,7 @@ const packages = [
   {
     id: 'mid',
     title: 'Mid-Range Home Automation',
-    img: 'Medium.jpeg',
+    img: 'Medium.jpeg?v=2',
     price: '₹65,999 - ₹1,50,000',
     desc: 'Ideal for enhanced security, smart temperature, and voice assistant integration.',
     items: [
@@ -36,7 +36,7 @@ const packages = [
   {
     id: 'premium',
     title: 'Premium Home Automation',
-    img: 'Luxury.jpeg',
+    img: 'Luxury.jpeg?v=2',
     price: '₹1,50,000 - ₹5,00,000+',
     desc: 'Ideal for full automation, high-end security, and seamless integration for ultimate convenience.',
     items: [

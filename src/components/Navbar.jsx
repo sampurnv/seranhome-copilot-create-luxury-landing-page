@@ -5,7 +5,7 @@ const Navbar = () => {
       <div className="container">
         <div className="nav-brand">
           <a href="/" style={{display:'flex',alignItems:'center',gap:'0.75rem',textDecoration:'none',color:'inherit'}}>
-            <img src="Final-Logo.png" alt="Seran Home Logo" className="nav-logo" />
+            <img src="Final-Logo.png?v=2" alt="Seran Home Logo" className="nav-logo" />
 
             <span className="nav-brand-text">Automation</span>
           </a>

@@ -1,11 +1,11 @@
 import React from 'react';
 
 const partners = [
-  { id: 'google', name: 'Google Home', img: '/partners/google.png' },
-  { id: 'hikvision', name: 'Hikvision', img: '/partners/hikvision.png' },
-  { id: 'legrand', name: 'Legrand', img: '/partners/legrand.png' },
-  { id: 'aws', name: 'AWS IoT', img: '/partners/aws.png' },
-  { id: 'cisco', name: 'Cisco', img: '/partners/cisco.png' }
+  { id: 'google', name: 'Google Home', img: '/partners/google.png?v=2' },
+  { id: 'hikvision', name: 'Hikvision', img: '/partners/hikvision.png?v=2' },
+  { id: 'legrand', name: 'Legrand', img: '/partners/legrand.png?v=2' },
+  { id: 'aws', name: 'AWS IoT', img: '/partners/aws.png?v=2' },
+  { id: 'cisco', name: 'Cisco', img: '/partners/cisco.png?v=2' }
 ];
 
 const Partners = () => {
