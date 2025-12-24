@@ -26,8 +26,7 @@ const Partners = () => {
           {partners.map(p => (
             <article key={p.id} className="partner-card">
               <div className="partner-media">
-                <img src={p.img} alt={p.name} className="partner-img" onError={(e)=>{e.currentTarget.style.display='none'}} />
-                <div className="partner-badge">{p.name.split(' ').map(n=>n[0]).join('')}</div>
+                <img src={p.img} alt={p.name} className="partner-img" />
               </div>
               <div className="partner-name">{p.name}</div>
             </article>
