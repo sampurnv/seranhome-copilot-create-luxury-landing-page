@@ -1,15 +1,31 @@
 import React from 'react';
 
-const Partners = () => {
-  const partners = ['CRESTRON', 'CONTROL4', 'KNX', 'LUTRON', 'SAVANT'];
+const partners = [
+  { id: 'google', name: 'Google Home', img: '/partners/google.png' },
+  { id: 'hikvision', name: 'Hikvision', img: '/partners/hikvision.png' },
+  { id: 'legrand', name: 'Legrand', img: '/partners/legrand.png' },
+  { id: 'aws', name: 'AWS IoT', img: '/partners/aws.png' },
+  { id: 'cisco', name: 'Cisco', img: '/partners/cisco.png' }
+];
 
+const Partners = () => {
   return (
-    <section className="partners">
+    <section className="partners" aria-label="Technology partners">
       <div className="container">
-        <p className="partners-label">Trusted Technology Partners</p>
+        <header className="section-header">
+          <p className="partners-label">Trusted Technology Partners</p>
+          <p className="section-subtitle">We collaborate with industry-leading brands to deliver secure, reliable smart home experiences.</p>
+        </header>
+
         <div className="partners-grid">
-          {partners.map((partner, index) => (
-            <div key={index} className="partner-logo">{partner}</div>
+          {partners.map(p => (
+            <article key={p.id} className="partner-card">
+              <div className="partner-media">
+                <img src={p.img} alt={p.name} className="partner-img" onError={(e)=>{e.currentTarget.style.display='none'}} />
+                <div className="partner-badge">{p.name.split(' ').map(n=>n[0]).join('')}</div>
+              </div>
+              <div className="partner-name">{p.name}</div>
+            </article>
           ))}
         </div>
       </div>

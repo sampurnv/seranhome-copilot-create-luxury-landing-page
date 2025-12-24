@@ -33,14 +33,14 @@ body {
     font-family: var(--font-body);
     background-color: var(--color-dark);
     color: var(--color-off-white);
-    line-height: 1.8;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 3%;
 }
 
 /* Navigation */
@@ -52,7 +52,7 @@ body {
     z-index: 1000;
     background: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(10px);
-    padding: 2rem 0;
+    padding: 1rem 0;
     transition: var(--transition);
 }
 
@@ -69,6 +69,36 @@ body {
     color: var(--color-gold);
 }
 
+/* Align logo and brand text */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Logo styling to blend with theme */
+.nav-logo {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    /* Apply a gold tint to raster images */
+    filter: grayscale(1) contrast(1.1) sepia(0.9) saturate(3) hue-rotate(-20deg) brightness(1.95);
+}
+
+.nav-brand-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+}
+
+.nav-brand-text {
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--color-off-white);
+    font-family: var(--font-heading);
+}
+
 .nav-links {
     display: flex;
     gap: 3rem;
@@ -81,6 +111,53 @@ body {
     letter-spacing: 1px;
     transition: var(--transition);
     position: relative;
+}
+
+/* Dropdown styles for Services menu */
+.nav-item {
+    position: relative;
+}
+
+.dropdown-toggle {
+    color: var(--color-off-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 0.1rem 0.2rem;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: rgba(10,10,10,0.95);
+    border-radius: 8px;
+    padding: 0.3rem;
+    min-width: 180px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    z-index: 1200;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 0.9rem;
+    color: var(--color-off-white);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(212,175,55,0.06);
+    color: var(--color-gold);
+}
+
+.nav-item:hover .dropdown-menu,
+.nav-item:focus-within .dropdown-menu {
+    display: block;
 }
 
 .nav-links a::after {
@@ -105,7 +182,7 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,7 +215,7 @@ body {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(2rem, 6.5vw, 4rem);
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 2rem;
@@ -218,7 +295,7 @@ body {
 
 /* Sections */
 section {
-    padding: 10rem 0;
+    padding: 4rem 0;
     position: relative;
 }
 
@@ -230,7 +307,7 @@ section {
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(1.75rem, 3.5vw, 2.6rem);
     font-weight: 300;
     margin-bottom: 1.5rem;
     color: var(--color-white);
@@ -238,7 +315,7 @@ section {
 }
 
 .section-subtitle {
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
     color: var(--color-grey-light);
     line-height: 1.8;
 }
@@ -292,8 +369,8 @@ section {
 .feature-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    margin-bottom: 8rem;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
     align-items: center;
 }
 
@@ -307,7 +384,7 @@ section {
 
 .feature-image {
     width: 100%;
-    height: 500px;
+    height: 360px;
     position: relative;
     overflow: hidden;
 }
@@ -355,29 +432,246 @@ section {
 }
 
 .feature-content {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .feature-label {
     display: block;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--color-gold);
     letter-spacing: 3px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .feature-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.25rem, 2.6vw, 1.8rem);
     font-weight: 300;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--color-white);
 }
 
 .feature-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--color-grey-light);
-    line-height: 1.8;
+    line-height: 1.6;
+}
+
+/* Automation packages cards */
+.automation-packages {
+    background: #0f0f0f;
+    padding: 6rem 0;
+}
+
+.automation-packages .section-title {
+    color: var(--color-gold);
+    margin-bottom: 0.5rem;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.package-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.03);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.7);
+}
+
+.package-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.package-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.package-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-white);
+    margin-bottom: 0.25rem;
+}
+
+.package-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--color-grey-light);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.package-list li::before {
+    content: '•';
+    color: var(--color-gold);
+    display: inline-block;
+    width: 1.2rem;
+    margin-left: -1.2rem;
+}
+
+.package-price {
+    color: var(--color-gold);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.package-desc {
+    color: var(--color-grey-light);
+    font-size: 0.95rem;
+}
+
+.package-actions {
+    margin-top: 0.5rem;
+}
+
+.package-actions .cta-button {
+    padding: 0.7rem 1.1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+}
+
+/* Partners section */
+.partners {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #090909, #0f0f0f);
+}
+
+.partners-label {
+    color: var(--color-gold);
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.partners .section-subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-grey-light);
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.25rem 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.partner-card {
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    background: rgba(255,255,255,0.01);
+    border: 1px solid rgba(255,255,255,0.03);
+}
+
+.partner-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.65);
+}
+
+.partner-media {
+    position: relative;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.partner-img {
+    max-height: 64px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.partner-badge {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(212,175,55,0.12), rgba(212,175,55,0.06));
+    color: var(--color-gold);
+    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+}
+
+.partner-name {
+    color: var(--color-grey-light);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+/* Compact testimonials styling */
+.testimonials {
+    padding: 2rem 0;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+    align-items: start;
+}
+
+.testimonial {
+    background: rgba(255,255,255,0.015);
+    border: 1px solid rgba(255,255,255,0.02);
+    padding: 0.6rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.45);
+}
+
+.testimonial-text {
+    font-size: 0.88rem;
+    color: var(--color-grey-light);
+    line-height: 1.35;
+    margin-bottom: 0.45rem;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.author-name {
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 0.86rem;
+}
+
+.author-title {
+    font-size: 0.75rem;
+    color: var(--color-grey-light);
 }
 
 /* Technology Partners */

@@ -7,18 +7,14 @@ const Process = () => {
       title: 'Consultation',
       description: 'We immerse ourselves in your lifestyle, understanding your needs and aspirations for your home.'
     },
+  
     {
       number: '02',
-      title: 'Design',
-      description: 'Our architects and designers craft a bespoke system that integrates seamlessly with your space.'
-    },
-    {
-      number: '03',
       title: 'Installation',
       description: 'Meticulous implementation with minimal disruption, executed by certified artisans.'
     },
     {
-      number: '04',
+      number: '03',
       title: 'Handover',
       description: 'Comprehensive orientation and ongoing support ensuring you feel truly at home with your system.'
     }

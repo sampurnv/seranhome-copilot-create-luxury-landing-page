@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h3>SERAN HOME</h3>
+            <h3>SERAN HOMES</h3>
             <p>Intelligent Living. Effortlessly Luxurious.</p>
           </div>
           <div className="footer-contact">
