@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const Navbar = () => {
   const [imgLoaded, setImgLoaded] = useState(true);
+    const [logoSrc, setLogoSrc] = useState('/Final%20Logo.png');
 
   return (
     <nav className="navbar">
@@ -9,12 +10,20 @@ const Navbar = () => {
         <div className="nav-brand">
           <a href="/" style={{display:'flex',alignItems:'center',gap:'0.75rem',textDecoration:'none',color:'inherit'}}>
             {imgLoaded && (
-              <img
-                src="/Final%20logo.png"
-                alt="Seran Home Logo"
-                style={{width:80,height:80,objectFit:'contain',borderRadius:6}}
-                onError={() => setImgLoaded(false)}
-              />
+                <img
+                  src={logoSrc}
+                  alt="Seran Home Logo"
+                  style={{width:80,height:80,objectFit:'contain',borderRadius:6}}
+                  onError={() => {
+                    if (logoSrc === '/Final%20Logo.png') {
+                      setLogoSrc('/Final%20logo.png');
+                    } else if (logoSrc === '/Final%20logo.png') {
+                      setImgLoaded(false);
+                    } else {
+                      setImgLoaded(false);
+                    }
+                  }}
+                />
             )}
 
             {!imgLoaded && (
