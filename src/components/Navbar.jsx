@@ -1,40 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Navbar = () => {
-  const [imgLoaded, setImgLoaded] = useState(true);
-    const [logoSrc, setLogoSrc] = useState('/Final%20Logo.png');
-
   return (
     <nav className="navbar">
       <div className="container">
         <div className="nav-brand">
           <a href="/" style={{display:'flex',alignItems:'center',gap:'0.75rem',textDecoration:'none',color:'inherit'}}>
-            {imgLoaded && (
-                <img
-                  src={logoSrc}
-                  alt="Seran Home Logo"
-                  style={{width:80,height:80,objectFit:'contain',borderRadius:6}}
-                  onError={() => {
-                    if (logoSrc === '/Final%20Logo.png') {
-                      setLogoSrc('/Final%20logo.png');
-                    } else if (logoSrc === '/Final%20logo.png') {
-                      setImgLoaded(false);
-                    } else {
-                      setImgLoaded(false);
-                    }
-                  }}
-                />
-            )}
+            <svg className="nav-logo" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="4" fill="#d4af37" />
+              <path d="M6 15v-6l6-3 6 3v6" stroke="#0a0a0a" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M9 12h6v6" stroke="#0a0a0a" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
 
-            {!imgLoaded && (
-              <svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="2" y="2" width="60" height="60" rx="4" fill="#d4af37" />
-                <path d="M6 15v-6l6-3 6 3v6" stroke="#0a0a0a" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M9 12h6v6" stroke="#0a0a0a" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            )}
-
-            <span style={{fontWeight:300,letterSpacing:'2px',color:'inherit'}}>Automation</span>
+            <span className="nav-brand-text">SERAN HOME</span>
           </a>
         </div>
         <div className="nav-links">
