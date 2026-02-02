@@ -1,0 +1,25 @@
+{
+  "name": "seranhome",
+  "version": "1.0.0",
+  "description": "An ultra-luxury, high-end landing page for a premium home automation brand targeting villa owners, penthouse residents, and luxury real estate developers.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "serve -s dist -l $PORT"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.11.0",
+    "serve": "^14.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.2",
+    "vite": "^7.3.0"
+  }
+}
